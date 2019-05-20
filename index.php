@@ -25,10 +25,13 @@ catch (PDOException $ex)
 }
 
 foreach ($db->query("SELECT * FROM scriptures_table") as $row) {
-    echo 'book: ' . $row['book'];
-    echo 'chapter: ' . $row['chapter'];
-    echo 'verse: ' . $row['verse'];
-    echo 'content: ' . $row['content'];
+    echo '<strong>' . $row['book'] . '<strong>' . '&nbsp;';
+
+    echo '<strong>' . $row['chapter'] . '<strong>' . ':';
+    
+    echo '<strong>' . $row['verse'] . '<strong>' . '&nbsp;' . '-';
+
+    echo '<p> "' . $row['content'] . '"<p>';
     echo '<br>';
 }
 
