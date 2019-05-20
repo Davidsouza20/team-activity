@@ -34,7 +34,6 @@ foreach ($db->query("SELECT * FROM scriptures_table") as $row) {
 
     echo '"' . $row['content'] . '"';
     echo '</p>';
-    echo '<br>';
 }
 
 ?>
