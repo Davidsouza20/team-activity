@@ -24,5 +24,11 @@ catch (PDOException $ex)
   die();
 }
 
+foreach ($db->query("SELECT * FROM scriptures_table") as $row) {
+    echo 'book: ' . $row['book'];
+    echo 'chapter: ' . $row['chapter'];
+    echo 'verse: ' . $row['verse'];
+    echo 'content: ' . $row['content'];
+}
 
 ?>
