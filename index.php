@@ -26,8 +26,17 @@ $book = "john";
    
 <?php
 $book = "john";
+
+
+
 ucfirst($book);
-foreach ($db->query("SELECT * FROM scriptures_table WHERE book=\'$book\'") as $row) {
+
+
+$query = "SELECT * FROM scriptures_table WHERE book='".$book."\'";
+
+echo $query;
+
+/*foreach ($db->query() as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
@@ -37,7 +46,7 @@ foreach ($db->query("SELECT * FROM scriptures_table WHERE book=\'$book\'") as $r
 
     echo '"' . $row['content'] . '"';
     echo '</p>';
-}
+}*/
 
 
 
