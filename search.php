@@ -1,8 +1,9 @@
 <?php
 
 include("dbconection.php");
-if (isset($_GET['book']))
+if (isset($_GET['book'])) {
     $book = $_GET['book'];
+}
 
 foreach ($db->query("SELECT $book FROM scriptures_table") as $row) {
     echo '<p>';
