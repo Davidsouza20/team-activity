@@ -6,8 +6,11 @@ if (isset($_GET['book'])) {
 }
 
 
+$term = 'john';
+ucfirst($term);
 
-/*foreach ($db->query("SELECT $book FROM scriptures_table") as $row) {
+
+foreach ($db->query("SELECT $term FROM scriptures_table") as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
