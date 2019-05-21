@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 
-  <script>
+
+</head>
+<body>
+    Book: <input type="text" name="book"><br>
+    <input class="btn btn-success" onclick= "search()"  type="button" value="Search">
+    <script>
     function search() {
       var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -20,11 +25,6 @@
     
   
   </script>
-</head>
-<body>
-    Book: <input type="text" name="book"><br>
-    <input class="btn btn-success" onclick= "search()"  type="button" value="Search">
-
     <div id="demo"></div>
 </body>
 </html>
