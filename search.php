@@ -2,12 +2,12 @@
 
 include("dbconection.php");
 if (isset($_GET['book'])) {
-    
+    echo $_GET['book'];
 }
 
-$book = "john";
 
-foreach ($db->query("SELECT $book FROM scriptures_table") as $row) {
+
+/*foreach ($db->query("SELECT $book FROM scriptures_table") as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
@@ -17,7 +17,7 @@ foreach ($db->query("SELECT $book FROM scriptures_table") as $row) {
 
     echo '"' . $row['content'] . '"';
     echo '</p>';
-}
+}*/
 
 
 
