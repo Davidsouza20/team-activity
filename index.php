@@ -34,9 +34,7 @@ ucfirst($book);
 
 $query = "SELECT * FROM scriptures_table WHERE book=" ."'" . $book ."'";
 
-echo $query;
-
-/*foreach ($db->query() as $row) {
+foreach ($db->query($query) as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
@@ -46,7 +44,7 @@ echo $query;
 
     echo '"' . $row['content'] . '"';
     echo '</p>';
-}*/
+}
 
 
 
