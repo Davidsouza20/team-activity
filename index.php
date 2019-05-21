@@ -25,11 +25,11 @@ $book = "john";
 
    
 <?php
-$book = "John";
+$boo = "john";
 
 
 
-ucfirst($book);
+$book = lcfirst($boo);
 
 
 $query = "SELECT * FROM scriptures_table WHERE book=" ."'" . $book ."'";
