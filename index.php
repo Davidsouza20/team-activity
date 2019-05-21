@@ -25,8 +25,8 @@ $book = "john";
 
    
 <?php
-
-foreach ($db->query("SELECT * FROM scriptures_table") as $row) {
+$book = "john";
+foreach ($db->query("SELECT * FROM scriptures_table WHERE book=$book") as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
