@@ -1,3 +1,5 @@
+<?php
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,3 +30,6 @@
     <div id="demo"></div>
 </body>
 </html>
+
+
+?>
