@@ -2,7 +2,7 @@
 
 include("dbconection.php");
 if (isset($_GET['book'])) {
-    echo $_GET['book'];
+    print($_GET['book']);
 }
 
 
