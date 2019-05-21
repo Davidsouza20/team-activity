@@ -32,7 +32,8 @@ $book = "john";
 ucfirst($book);
 
 
-$query = "SELECT * FROM scriptures_table WHERE book="."$book";
+$query = "SELECT * FROM scriptures_table WHERE book=" . "'"" 
+" .$book . "'"" ";
 
 echo $query;
 
