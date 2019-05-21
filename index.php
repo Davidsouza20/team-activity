@@ -1,9 +1,7 @@
 <?php
 
 include("dbconection.php");
-if (isset($_GET['book'])) {
-    
-}
+
 
 $book = "john";
 ?>
@@ -15,20 +13,21 @@ $book = "john";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script src="index.js"></script>
 </head>
 <body>
+    <form action="" method="post">
     Book: <input type="text" name="book"><br>
-    <input class="btn btn-success" onclick= "search()"  type="button" value="Search">
-   
+    <input class="btn btn-success" type="submit" value="Search">
+    </form>
     <div id="demo"></div>
 
    
 <?php
 $boo = "john";
 
+echo $_POST['book'];
 
-
+//make the fisrt letter Uppercase
 $book = ucfirst($boo);
 
 
