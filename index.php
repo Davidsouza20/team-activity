@@ -25,9 +25,9 @@ $book = "john";
 
    
 <?php
-$book = "'john'";
+$book = "john";
 ucfirst($book);
-foreach ($db->query("SELECT * FROM scriptures_table WHERE book=$book") as $row) {
+foreach ($db->query("SELECT * FROM scriptures_table WHERE book='$book'") as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
