@@ -25,7 +25,8 @@ $book = "john";
 
    
 <?php
-$book = "'John'";
+$book = "'john'";
+ucfirst($book);
 foreach ($db->query("SELECT * FROM scriptures_table WHERE book=$book") as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
