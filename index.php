@@ -1,3 +1,13 @@
+<?php
+
+include("dbconection.php");
+if (isset($_GET['book'])) {
+    
+}
+
+$book = "john";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +23,8 @@
    
     <div id="demo"></div>
 
-    <?php
-
-include("dbconection.php");
-if (isset($_GET['book'])) {
-    
-}
-
-$book = "john";
-
+   
+<?php
 foreach ($db->query("SELECT $book FROM scriptures_table") as $row) {
     echo '<p>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
