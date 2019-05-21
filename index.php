@@ -12,6 +12,33 @@
     <input class="btn btn-success" onclick= "search()"  type="button" value="Search">
    
     <div id="demo"></div>
+
+    <?php
+
+include("dbconection.php");
+if (isset($_GET['book'])) {
+    
+}
+
+$book = "john";
+
+foreach ($db->query("SELECT $book FROM scriptures_table") as $row) {
+    echo '<p>';
+    echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
+
+    echo '<strong>' . $row['chapter'] . '</strong>' . ':';
+    
+    echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;' . '-';
+
+    echo '"' . $row['content'] . '"';
+    echo '</p>';
+}
+
+
+
+
+
+?>
 </body>
 </html>
 
