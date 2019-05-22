@@ -1,9 +1,5 @@
 <?php
-
 include("dbconection.php");
-
-
-$book = "john";
 ?>
 
 <!DOCTYPE html>
@@ -19,29 +15,27 @@ $book = "john";
     Book: <input type="text" name="book"><br>
     <input class="btn btn-success" type="submit" value="Search">
     </form>
-    <div id="demo"></div>
-
-   
+ 
 <?php
-$boo = strtolower($_POST['book']);
+$term = strtolower($_POST['book']);
 
 //make the fisrt letter Uppercase
 
-$book = ucfirst($boo);
+$book = ucfirst($term);
 
 
 $query = "SELECT * FROM scriptures_table WHERE book=" ."'" . $book ."'";
 
 foreach ($db->query($query) as $row) {
-    echo '<p>';
+    echo '<a>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
     echo '<strong>' . $row['chapter'] . '</strong>' . ':';
     
     echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;' . '-';
 
-    echo '"' . $row['content'] . '"';
-    echo '</p>';
+    //echo '"' . $row['content'] . '"';
+    echo '<a/>';
 }
 
 
