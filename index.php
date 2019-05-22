@@ -23,9 +23,10 @@ $book = "john";
 
    
 <?php
-$boo = $_POST['book'];
+$boo = strtolower($_POST['book']);
 
 //make the fisrt letter Uppercase
+
 $book = ucfirst($boo);
 
 
