@@ -35,7 +35,7 @@ foreach ($db->query($query) as $row) {
     echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;' . '-';
 
     //echo '"' . $row['content'] . '"';
-    echo '<a/>';
+    echo '<agit />';
 }
 
 
