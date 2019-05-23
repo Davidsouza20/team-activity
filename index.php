@@ -23,9 +23,14 @@ include("dbconection.php");
  
 <?php
 $book = $_POST['book'];
+
 $query = "SELECT * 
+            FROM scriptures_table"; 
+            //WHERE LOWER(book)=" ."LOWER('" . $book ."')";
+
+/*$query = "SELECT * 
             FROM scriptures_table 
-            WHERE LOWER(book)=" ."LOWER('" . $book ."')";
+            WHERE LOWER(book)=" ."LOWER('" . $book ."')";*/
 
 foreach ($db->query($query) as $row) {
     echo '<p class="m-3" href="details.php">';
