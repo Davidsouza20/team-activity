@@ -27,7 +27,7 @@ $book = ucfirst($term);
 $query = "SELECT * FROM scriptures_table WHERE book=" ."'" . $book ."'";
 
 foreach ($db->query($query) as $row) {
-    echo '<a>';
+    echo '<a href="#">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
     echo '<strong>' . $row['chapter'] . '</strong>' . ':';
