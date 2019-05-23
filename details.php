@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include("dbconection.php");
     //echo $_SESSION['content'];
     $id = $_SESSION['content'];
 
