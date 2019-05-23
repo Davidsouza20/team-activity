@@ -29,7 +29,7 @@ $book = $_POST['book'];
 
   $query = "SELECT * 
             FROM scriptures_table 
-            WHERE LOWER(book)=" ."'" . LOWER($book) ."'";
+            WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 
 echo $query;
 foreach ($db->query($query) as $row) {
