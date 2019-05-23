@@ -17,14 +17,20 @@ include("dbconection.php");
     </form>
  
 <?php
-$term = strtolower($_POST['book']);
+//$term = strtolower($_POST['book']);
 
 //make the fisrt letter Uppercase
 
-$book = ucfirst($term);
+//$book = ucfirst($term);
+$book = $_POST['book'];
 
+/*$query = "SELECT * 
+            FROM scriptures_table WHERE book=" ."'" . $book ."'";*/
 
-$query = "SELECT * FROM scriptures_table WHERE book=" ."'" . $book ."'";
+  $query = "SELECT * 
+            FROM scriptures_table 
+            WHERE LOWER(book)=" ."'" . LOWER($book) ."'";
+
 
 foreach ($db->query($query) as $row) {
     echo '<a href="details.php">';
