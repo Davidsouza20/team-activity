@@ -1,12 +1,10 @@
 <?php 
-    session_start();
+    
     include("dbconection.php");
     $id = $_GET['id'];
     $query = "SELECT * 
             FROM scriptures_table 
             WHERE id = $id";
-
-
 
 echo "<h1>Scripture Resources</h1>";
 foreach ($db->query($query) as $row) {
