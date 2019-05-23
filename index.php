@@ -37,7 +37,7 @@ $book = $_POST['book'];
             WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 
 foreach ($db->query($query) as $row) {
-    echo '<a href="details.php">';
+    echo '<a class="m-3" href="details.php">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
     echo '<strong>' . $row['chapter'] . '</strong>' . ':';
