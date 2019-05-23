@@ -31,7 +31,7 @@ $book = $_POST['book'];
             FROM scriptures_table 
             WHERE LOWER(book)=" ."'" . LOWER($book) ."'";
 
-
+echo $query;
 foreach ($db->query($query) as $row) {
     echo '<a href="details.php">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
