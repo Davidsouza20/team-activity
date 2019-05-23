@@ -9,13 +9,13 @@
 
     echo "<h1>Scripture Resources</h1>";
     echo '<p class="m-3" href="details.php">';
-    echo '<strong>' . $id['book'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $query['book'] . '</strong>' . '&nbsp;';
 
-    echo '<strong>' . $id['chapter'] . '</strong>' . ':';
+    echo '<strong>' . $query['chapter'] . '</strong>' . ':';
     
-    echo '<strong>' . $id['verse'] . '</strong>' . '&nbsp;' . '-';
+    echo '<strong>' . $query['verse'] . '</strong>' . '&nbsp;' . '-';
   
-    echo '"' . $id['content'] . '"';
+    echo '"' . $query['content'] . '"';
     echo '</p><br>';
 
 
