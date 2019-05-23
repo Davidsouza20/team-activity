@@ -17,8 +17,8 @@ include("dbconection.php");
 </head>
 <body>
     <form class="form-group" action="" method="post">
-    Book: <input type="text" name="book"><br>
-    <input class="btn btn-success" type="submit" value="Search">
+    Book: <input class="p-2" type="text" name="book"><br>
+    <input class="btn btn-success p-2" type="submit" value="Search">
     </form>
  
 <?php
