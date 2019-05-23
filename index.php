@@ -36,14 +36,16 @@ $query = "SELECT *
 
 //echo "<h1>Scripture Resources</h1>";
 foreach ($db->query($query) as $row) {
-    echo '<a class="m-3" href="details.php">';
+    $id = $row['id'];
+
+    echo '<a class="m-3" href="details.php?id="'.$id.'>';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
     echo '<strong>' . $row['chapter'] . '</strong>' . ':';
     
     echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;';
 
-    $_SESSION['content'] = $row['id'];
+    //$_SESSION['content'] = $row['id'];
     //echo '"' . $row['content'] . '"';
     echo '</a><br>';
 }

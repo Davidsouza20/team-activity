@@ -2,8 +2,8 @@
     session_start();
     include("dbconection.php");
     //echo $_SESSION['content'];
-    $id = $_SESSION['content'];
-
+    //$id = $_SESSION['content'];
+    $id = $_GET['id'];
     $query = "SELECT * 
             FROM scriptures_table 
             WHERE id = $id";
