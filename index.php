@@ -22,17 +22,8 @@ include("dbconection.php");
     </form>
  
 <?php
-//$term = strtolower($_POST['book']);
-
-//make the fisrt letter Uppercase
-
-//$book = ucfirst($term);
 $book = $_POST['book'];
-
-/*$query = "SELECT * 
-            FROM scriptures_table WHERE book=" ."'" . $book ."'";*/
-
-  $query = "SELECT * 
+$query = "SELECT * 
             FROM scriptures_table 
             WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 
