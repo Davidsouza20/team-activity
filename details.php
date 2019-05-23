@@ -9,7 +9,7 @@
 
 
 
-    echo "<h1>Scripture Resources</h1>";
+    /*echo "<h1>Scripture Resources</h1>";
     echo '<p class="m-3" href="details.php">';
     echo '<strong>' . $query['book'] . '</strong>' . '&nbsp;';
 
@@ -18,10 +18,10 @@
     echo '<strong>' . $query['verse'] . '</strong>' . '&nbsp;' . '-';
   
     echo '"' . $query['content'] . '"';
-    echo '</p><br>';
+    echo '</p><br>';*/
 
 
-/*foreach ($db->query($query) as $row) {
+foreach ($db->query($query) as $row) {
     echo '<p class="m-3" href="details.php">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
@@ -31,6 +31,6 @@
   
     echo '"' . $row['content'] . '"';
     echo '</p><br>';
-}*/
+}
 
 ?>
