@@ -3,13 +3,13 @@
     //echo $_SESSION['content'];
     $id = $_SESSION['content'];
 
-    echo $query = "SELECT * 
+    $query = "SELECT * 
             FROM scriptures_table 
             WHERE id = $id";
 
 
 
-    /*echo "<h1>Scripture Resources</h1>";
+    echo "<h1>Scripture Resources</h1>";
     echo '<p class="m-3" href="details.php">';
     echo '<strong>' . $query['book'] . '</strong>' . '&nbsp;';
 
@@ -18,7 +18,7 @@
     echo '<strong>' . $query['verse'] . '</strong>' . '&nbsp;' . '-';
   
     echo '"' . $query['content'] . '"';
-    echo '</p><br>';*/
+    echo '</p><br>';
 
 
 /*foreach ($db->query($query) as $row) {
