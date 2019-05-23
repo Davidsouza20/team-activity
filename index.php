@@ -41,7 +41,7 @@ foreach ($db->query($query) as $row) {
 
     echo '<strong>' . $row['chapter'] . '</strong>' . ':';
     
-    echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;' . '-';
+    echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;';
 
     $_SESSION['content'] = $row['id'];
     //echo '"' . $row['content'] . '"';
