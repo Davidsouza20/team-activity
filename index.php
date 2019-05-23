@@ -24,15 +24,15 @@ include("dbconection.php");
 <?php
 $book = $_POST['book'];
 
-$query = "SELECT * 
-            FROM scriptures_table"; 
-            //WHERE LOWER(book)=" ."LOWER('" . $book ."')";
-
 /*$query = "SELECT * 
-            FROM scriptures_table 
-            WHERE LOWER(book)=" ."LOWER('" . $book ."')";*/
+            FROM scriptures_table";*/ 
+            
 
-echo "<h1>Scripture Resources</h1>";
+$query = "SELECT * 
+            FROM scriptures_table 
+            WHERE LOWER(book)=" ."LOWER('" . $book ."')";
+
+//echo "<h1>Scripture Resources</h1>";
 foreach ($db->query($query) as $row) {
     echo '<p class="m-3" href="details.php">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
