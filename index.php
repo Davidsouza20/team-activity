@@ -16,7 +16,7 @@ include("dbconection.php");
   <title>Document</title>
 </head>
 <body >
-    <form class="form-group mx-auto" action="" method="post">
+    <form class="m-3 form-group mx-auto" action="" method="post">
     Book: <input class="m-2" type="text" name="book"><br>
     <input class="btn btn-success m-2" type="submit" value="Search">
     </form>
