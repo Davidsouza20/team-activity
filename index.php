@@ -1,4 +1,7 @@
 <?php
+ session_start();
+ $_SESSION['content'];
+
 include("dbconection.php");
 ?>
 
@@ -12,7 +15,6 @@ include("dbconection.php");
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
   <title>Document</title>
 </head>
 <body >
@@ -34,15 +36,16 @@ $query = "SELECT *
 
 //echo "<h1>Scripture Resources</h1>";
 foreach ($db->query($query) as $row) {
-    echo '<p class="m-3" href="details.php">';
+    echo '<a class="m-3" href="details.php">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
     echo '<strong>' . $row['chapter'] . '</strong>' . ':';
     
     echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;' . '-';
 
-    echo '"' . $row['content'] . '"';
-    echo '</p><br>';
+    $_SESSION['content'] = $row['id'];
+    //echo '"' . $row['content'] . '"';
+    echo '</a><br>';
 }
 
 
