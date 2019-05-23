@@ -24,17 +24,13 @@ include("dbconection.php");
     </form>
  
 <?php
-$book = $_POST['book'];
-
-/*$query = "SELECT * 
-            FROM scriptures_table";*/ 
-            
+$book = $_POST['book'];          
 
 $query = "SELECT * 
             FROM scriptures_table 
             WHERE LOWER(book)=" ."LOWER('" . $book ."')";
 
-//echo "<h1>Scripture Resources</h1>";
+
 foreach ($db->query($query) as $row) {
     $id = $row['id'];
 
@@ -45,8 +41,6 @@ foreach ($db->query($query) as $row) {
     
     echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;';
 
-    //$_SESSION['content'] = $row['id'];
-    //echo '"' . $row['content'] . '"';
     echo '</a><br>';
 }
 
