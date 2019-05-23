@@ -7,6 +7,8 @@
             FROM scriptures_table 
             WHERE id = $id";
 
+
+
     /*echo "<h1>Scripture Resources</h1>";
     echo '<p class="m-3" href="details.php">';
     echo '<strong>' . $query['book'] . '</strong>' . '&nbsp;';
@@ -28,7 +30,7 @@
     echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;' . '-';
   
     echo '"' . $row['content'] . '"';
-    echo '</p><br>';*/
-}
+    echo '</p><br>';
+}*/
 
 ?>
