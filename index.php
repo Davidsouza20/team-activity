@@ -45,14 +45,18 @@ foreach ($db->query($query) as $row) {
 ?>
 
 <form class="m-3 form-group mx-auto" action="" method="post">
+
+<div class="form-group">
     Book: <input class="m-2" type="text" name="book"><br>
     Chapter: <input class="m-2" type="text" name="chapter"><br>
     Verse: <input class="m-2" type="text" name="verse"><br>
-    Content: <input class="m-2" type="textarea" name="book"><br>
+    Content: <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="5"></textarea>
     
     
     
     <input class="btn btn-success m-2" type="submit" value="Save">
+
+    </div>
     </form>
 
 
