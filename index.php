@@ -42,12 +42,20 @@ foreach ($db->query($query) as $row) {
 
     echo '</a><br>';
 }
-
-
-
-
-
 ?>
+
+<form class="m-3 form-group mx-auto" action="" method="post">
+    Book: <input class="m-2" type="text" name="book"><br>
+    Chapter: <input class="m-2" type="text" name="chapter"><br>
+    Verse: <input class="m-2" type="text" name="verse"><br>
+    Content: <input class="m-2" type="textarea" name="book"><br>
+    
+    
+    
+    <input class="btn btn-success m-2" type="submit" value="Save">
+    </form>
+
+
 </body>
 </html>
 

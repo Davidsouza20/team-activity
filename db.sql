@@ -15,3 +15,23 @@ VALUES ('John', 1, 5, 'And the light shineth in darkness; and the darkness compr
 
 
 SELECT * FROM scriptures_table;
+
+
+CREATE TABLE topic (
+id serial,
+name varchar(255) NOT NULL,
+PRIMARY KEY(id)
+);
+
+INSERT INTO topic (name)
+VALUES  ('Faith'), 
+	('Sacrifice'), 
+	('Charity');
+
+SELECT * FROM topic;
+
+CREATE TABLE link_topic_to_scripture ( 
+id serial,
+topicID serial REFERENCES topic(id),
+scriptureID serial REFERENCES scriptures_table(id)
+);
