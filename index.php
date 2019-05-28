@@ -48,15 +48,24 @@ foreach ($db->query($query) as $row) {
 
 <div class="form-group">
     <label for="book">Book:</label>   
-    <input class="m-2" type="text" name="book"><br>
-    <label for="chapter">Chapter:</label> 
+    <input class="m-2" type="text" name="book">
+    <label for="chapter">Chapter:</label>
     <input class="m-2" type="text" name="chapter"><br>
     <label for="verse">Verse:</label>    
     <input class="m-2" type="text" name="verse"><br>
     <label for="content"> Content:</label> 
-    <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="5"></textarea>
+    <textarea class="form-control" id="content" name="content"></textarea>
     
-    
+    <?php 
+      $query = "SELECT * 
+                FROM topics";
+
+      foreach ($db->query($query) as $row) {
+        echo '<input type="checkbox" name="topics[]" value="'.$row['name'] .'">' .$row['name'].' <br>';
+
+      }
+
+    ?>
     
     <input class="btn btn-success m-2" type="submit" value="Save">
 
