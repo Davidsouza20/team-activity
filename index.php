@@ -44,7 +44,7 @@ foreach ($db->query($query) as $row) {
 }
 ?>
 
-<form class="m-3 form-group mx-auto" action="" method="post">
+<form class="m-3 form-group mx-auto" action="scripture-list.php" method="post">
 
 <div class="form-group">
     <label for="book">Book:</label> <br>  
