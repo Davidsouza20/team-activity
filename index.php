@@ -57,12 +57,10 @@ foreach ($db->query($query) as $row) {
     <textarea class="form-control" id="content" name="content"></textarea><br>
     
     <?php 
-      $query = "SELECT * 
-                FROM topics";
+      $query = "SELECT*FROM topics";
 
-      foreach ($db->query($query) as $row) {
-        echo '<input type="checkbox" name="topics[]" value="'.$row['name'] .'">' .$row['name'].' <br>';
-
+    foreach ($db->query($query) as $row) {
+        echo '<input type="checkbox" name="topic" value="'.$row['name'] .'">' .$row['name'].' <br>';
       }
 
     ?>
