@@ -47,14 +47,14 @@ foreach ($db->query($query) as $row) {
 <form class="m-3 form-group mx-auto" action="" method="post">
 
 <div class="form-group">
-    <label for="book">Book:</label>   
-    <input class="m-2" type="text" name="book">
-    <label for="chapter">Chapter:</label>
+    <label for="book">Book:</label> <br>  
+    <input class="m-2" type="text" name="book"><br>
+    <label for="chapter">Chapter:</label><br>
     <input class="m-2" type="text" name="chapter"><br>
-    <label for="verse">Verse:</label>    
+    <label for="verse">Verse:</label>  <br>  
     <input class="m-2" type="text" name="verse"><br>
-    <label for="content"> Content:</label> 
-    <textarea class="form-control" id="content" name="content"></textarea>
+    <label for="content"> Content:</label> <br>
+    <textarea class="form-control" id="content" name="content"></textarea><br>
     
     <?php 
       $query = "SELECT * 
