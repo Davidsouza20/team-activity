@@ -58,8 +58,10 @@ foreach ($db->query($query) as $row) {
     
     <?php 
       $query = "SELECT*FROM topics";
-      echo "$query";
     
+      foreach ($db->query($query) as $row) {
+        echo $row['name'];
+      }
 
     ?>
     
