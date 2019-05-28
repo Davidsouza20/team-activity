@@ -3,7 +3,6 @@ $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
 foreach ($_POST['topic'] as $topic) {
-    $topics = array($topic);
     echo $topic;
 }
 
