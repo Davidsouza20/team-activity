@@ -57,9 +57,9 @@ foreach ($db->query($query) as $row) {
     <textarea class="form-control" id="content" name="content"></textarea><br>
     
     <?php 
-      $query = "SELECT*FROM topics";
+      $query1 = "SELECT*FROM topics";
     
-      foreach ($db->query($query) as $row) {
+      foreach ($db->query($query1) as $row) {
         echo $row['name'];
       }
 
