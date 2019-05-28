@@ -56,7 +56,12 @@ foreach ($db->query($query) as $row) {
     <label for="content"> Content:</label> <br>
     <textarea class="form-control" id="content" name="content"></textarea><br>
     
-  
+    <?php 
+      $query = "SELECT*FROM topics";
+      echo "$query";
+    
+
+    ?>
     
     <input class="btn btn-success m-2" type="submit" value="Save">
 
