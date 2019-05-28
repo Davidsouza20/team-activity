@@ -3,12 +3,10 @@ include("dbconection.php");
 $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
+$content = $_POST['content'];
 
-echo $book;
-echo $chapter; 
-echo $verse;
 
-$query = "INSERT INTO scriptures_table ('book', 'chapter', 'verse') VALUES (''$book'', ''$chapter'', ''$verse'')"; 
+$query = "INSERT INTO scriptures_table ('book', 'chapter', 'verse') VALUES (''$book'', ''$chapter'', ''$verse'', ''$content''')"; 
 
 echo $query;
 
