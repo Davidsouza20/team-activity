@@ -56,14 +56,7 @@ foreach ($db->query($query) as $row) {
     <label for="content"> Content:</label> <br>
     <textarea class="form-control" id="content" name="content"></textarea><br>
     
-    <?php 
-      /*$query = "SELECT*FROM topics";
-
-    foreach ($db->query($query) as $row) {
-        echo '<input type="checkbox" name="topic" value="'.$row['name'] .'">' .$row['name'].' <br>';
-      }*/
-
-    ?>
+  
     
     <input class="btn btn-success m-2" type="submit" value="Save">
 
