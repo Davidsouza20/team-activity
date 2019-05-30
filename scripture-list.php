@@ -50,8 +50,8 @@ foreach ($db->query($query1) as $row) {
     // Go through each topic in the result
     while ($topicRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
     {
-        echo '<br>'
-        echo '<strong>' . $topicRow['name'] . ' '. '</strong>';
+        echo '<br>';
+        echo '<strong>' . $topicRow['name'] . ' ' .'</strong>';
     }
     echo '</p>';
 }
