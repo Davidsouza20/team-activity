@@ -14,12 +14,8 @@ $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute();
-
-$scriptureId = $db->lastInsertId('scriptures_table_id_seq');
-die();
-
 foreach ($_POST['topic'] as $topic) {
-    echo $topic;
+    $scriptureId = $db->lastInsertId('scriptures_table_id_seq');
     $query = 'INSERT INTO link_topic_to_scripture (topicid, scriptureid) VALUES (:topicID, :scriptureID)'; 
     $stmt = $db->prepare($query);
     $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
@@ -32,10 +28,7 @@ foreach ($_POST['topic'] as $topic) {
 
 
 
-$query = "SELECT * FROM scriptures_table"; 
-
-
-/*s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid";*/
+$query = "SELECT * FROM scriptures_table s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid";
 
 
 foreach ($db->query($query) as $row) {
