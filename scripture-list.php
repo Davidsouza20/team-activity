@@ -21,8 +21,8 @@ foreach ($_POST['topic'] as $topic) {
     $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
     $stmt->bindValue(':topicID', $topic, PDO::PARAM_INT);
     $stmt->execute();
+    die();
 }
-
 
 $query1 = 'SELECT id, book, chapter, verse, content FROM scripture_table';
 foreach ($db->query($query1) as $row) {
@@ -52,6 +52,6 @@ foreach ($db->query($query1) as $row) {
     }
     echo '</p>';*/
 }
-die();
+
 
 ?>
