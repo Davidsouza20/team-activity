@@ -25,10 +25,11 @@ die();
     $stmt = $db->prepare($query);
     $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
     $stmt->bindValue(':topicID', $topic, PDO::PARAM_INT);
-    $stmt->execute();*/
-}
+    $stmt->execute();
+}*/
 
-die();
+
+
 
 
 $query = "SELECT * FROM scriptures_table"; 
