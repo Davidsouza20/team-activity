@@ -37,11 +37,11 @@ foreach ($db->query($query1) as $row) {
 
     echo $row['content']. '&nbsp;';
 
-    // get the topics now for this scripture
+    /*/ get the topics now for this scripture
 	$stmtTopics = $db->prepare('SELECT name FROM topic t
         INNER JOIN link_topic_to_scripture st ON st.topicid = t.id
         WHERE st.scriptureid = :scriptureId');
-    $stmtTopics->bindValue(':scriptureId', 20);
+    $stmtTopics->bindValue(':scriptureId', $id);
     $stmtTopics->execute();
     
     // Go through each topic in the result
@@ -49,7 +49,7 @@ foreach ($db->query($query1) as $row) {
     {
         echo $topicRow['name'] . ' ';
     }
-    echo '</p>';
+    echo '</p>';*/
 }
 die();
 
