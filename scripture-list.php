@@ -24,10 +24,10 @@ foreach ($_POST['topic'] as $topic) {
 }
 
 
-$query1 = "SELECT s.book, s.chapter, s.verse, s.content, t.name FROM scriptures_table s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid INNER JOIN topic t ON lt.topicid = t.id";
+$query1 = 'SELECT id, book, chapter, verse, content FROM scripture';
 foreach ($db->query($query1) as $row) {
     $id = $row['id'];
-    echo '<strong>' . $row['name'] . '</strong>';
+    
     echo '<p class="m-3" href="details.php?id='.$id. '">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
@@ -38,6 +38,20 @@ foreach ($db->query($query1) as $row) {
     echo $row['content']. '&nbsp;';
 
     echo '</p><br>';
+
+
+    // get the topics now for this scripture
+	$stmtTopics = $db->prepare('SELECT name FROM topic t'
+        . ' INNER JOIN scripture_topic st ON st.topicId = t.id'
+        . ' WHERE st.scriptureId = :scriptureId');
+    $stmtTopics->bindValue(':scriptureId', $row['id']);
+    $stmtTopics->execute();
+    // Go through each topic in the result
+    while ($topicRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
+    {
+        echo $topicRow['name'] . ' ';
+    }
+    echo '</p>';
 }
 die();
 
