@@ -21,7 +21,7 @@ foreach ($_POST['topic'] as $topic) {
     $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
     $stmt->bindValue(':topicID', $topic, PDO::PARAM_INT);
     $stmt->execute();
-    die();
+    
 }
 
 $query1 = 'SELECT id, book, chapter, verse, content FROM scripture_table';
@@ -38,6 +38,8 @@ foreach ($db->query($query1) as $row) {
     echo $row['content']. '&nbsp;';
 
     echo '</p>';
+
+    die();
     /*/ get the topics now for this scripture
 	$stmtTopics = $db->prepare('SELECT name FROM topic t
         INNER JOIN link_topic_to_scripture st ON st.topicid = t.id
