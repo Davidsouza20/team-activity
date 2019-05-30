@@ -24,7 +24,7 @@ foreach ($_POST['topic'] as $topic) {
 }
 
 
-$query1 = 'SELECT id, book, chapter, verse, content FROM scripture';
+$query1 = 'SELECT id, book, chapter, verse, content FROM scripture_table';
 foreach ($db->query($query1) as $row) {
     $id = $row['id'];
     
@@ -41,7 +41,7 @@ foreach ($db->query($query1) as $row) {
 
 
     
-    /*/ get the topics now for this scripture
+    // get the topics now for this scripture
 	$stmtTopics = $db->prepare('SELECT name FROM topic t
         INNER JOIN link_topic_to_scripture st ON st.topicid = t.id
         WHERE st.scriptureid = :scriptureId');
@@ -53,7 +53,7 @@ foreach ($db->query($query1) as $row) {
     {
         echo $topicRow['name'] . ' ';
     }
-    echo '</p>';*/
+    echo '</p>';
 }
 die();
 
