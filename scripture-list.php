@@ -15,7 +15,7 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute();
 
-$scriptureId = $pdo->lastInsertId('scriptures_table_seq');
+$scriptureId = $db->lastInsertId('scriptures_table_seq');
 echo $scriptureId;
 die();
 
