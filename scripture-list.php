@@ -27,7 +27,7 @@ foreach ($_POST['topic'] as $topic) {
 $query1 = "SELECT s.book, s.chapter, s.verse, s.content, t.name FROM scriptures_table s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid INNER JOIN topic t ON lt.topicid = t.id";
 foreach ($db->query($query1) as $row) {
     $id = $row['id'];
-    echo '<strong>' . $row['topic'] . '</strong>';
+    echo '<strong>' . $row['name'] . '</strong>';
     echo '<p class="m-3" href="details.php?id='.$id. '">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
