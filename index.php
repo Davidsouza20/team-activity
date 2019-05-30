@@ -55,10 +55,10 @@ foreach ($db->query($query) as $row) {
     <textarea class="form-control" id="content" name="content"></textarea><br>
     
     <?php 
-      /*$query1 = "SELECT * FROM topic";
+      $query1 = "SELECT * FROM topic";
       foreach ($db->query($query1) as $row) {
         echo '<input type="checkbox" name="topic[]" value="'.$row['name'] .'">' .$row['name'].' <br>';
-      }*/
+      }
    
 
     ?>
