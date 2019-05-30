@@ -26,7 +26,10 @@ foreach ($_POST['topic'] as $topic) {
 die();
 
 
-$query = "SELECT * FROM scriptures_table s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid";
+$query = "SELECT * FROM scriptures_table"; 
+
+
+/*s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid";*/
 
 
 foreach ($db->query($query) as $row) {
