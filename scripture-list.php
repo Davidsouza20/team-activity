@@ -44,7 +44,7 @@ foreach ($db->query($query1) as $row) {
 	$stmtTopics = $db->prepare('SELECT name FROM topic t
         INNER JOIN link_topic_to_scripture st ON st.topicid = t.id
         WHERE st.scriptureid = :scriptureId');
-    $stmtTopics->bindValue(':scriptureId', $row['id']);
+    $stmtTopics->bindValue(':scriptureId', $id);
     $stmtTopics->execute();
     
     // Go through each topic in the result
