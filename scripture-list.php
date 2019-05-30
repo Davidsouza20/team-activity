@@ -20,11 +20,7 @@ $scriptureId = $pdo->lastInsertId(scriptures_table_seq);
 
 
 foreach ($_POST['topic'] as $topic) {
-    $query = 'INSERT INTO link_topic_to_scripture (topicid, scriptureid) VALUES (:topicID, :scriptureID)'; 
-    $stmt = $db->prepare($query);
-    $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
-    $stmt->bindValue(':topicID', $topic, PDO::PARAM_INT);
-    $stmt->execute();
+    echo $topic;
 }
 
 die();
