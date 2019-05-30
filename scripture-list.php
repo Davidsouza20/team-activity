@@ -21,19 +21,13 @@ foreach ($_POST['topic'] as $topic) {
     $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
     $stmt->bindValue(':topicID', $topic, PDO::PARAM_INT);
     $stmt->execute();
-    die();
 }
 
 
-
-
-
-$query = "SELECT * FROM scriptures_table s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid";
-
-
-foreach ($db->query($query) as $row) {
+$query1 = "SELECT s.book, s.chapter, s.verse, s.content, t.name FROM scriptures_table s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid INNER JOIN topic t ON lt.topicid = t.id";
+foreach ($db->query($query1) as $row) {
     $id = $row['id'];
-
+    echo '<strong>' . $row['topic'] . '</strong>';
     echo '<p class="m-3" href="details.php?id='.$id. '">';
     echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
 
@@ -45,6 +39,6 @@ foreach ($db->query($query) as $row) {
 
     echo '</p><br>';
 }
-
+die();
 
 ?>
