@@ -16,17 +16,17 @@ $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute();
 
 $scriptureId = $db->lastInsertId('scriptures_table_id_seq');
-echo $scriptureId;
 die();
 
-/*foreach ($_POST['topic'] as $topic) {
+foreach ($_POST['topic'] as $topic) {
     echo $topic;
     $query = 'INSERT INTO link_topic_to_scripture (topicid, scriptureid) VALUES (:topicID, :scriptureID)'; 
     $stmt = $db->prepare($query);
     $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
     $stmt->bindValue(':topicID', $topic, PDO::PARAM_INT);
     $stmt->execute();
-}*/
+    die();
+}
 
 
 
