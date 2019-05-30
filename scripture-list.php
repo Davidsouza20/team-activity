@@ -15,12 +15,12 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute();
 
-$scriptureId = $pdo->lastInsertId("scriptures_table_seq");
+//$scriptureId = $pdo->lastInsertId("scriptures_table_seq");
 
-echo $scriptureId;
+//echo $scriptureId;
 
 foreach ($_POST['topic'] as $topic) {
-    //echo $topic;
+    echo $topic;
     /*$query = 'INSERT INTO link_topic_to_scripture (topicid, scriptureid) VALUES (:topicID, :scriptureID)'; 
     $stmt = $db->prepare($query);
     $stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
