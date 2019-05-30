@@ -24,7 +24,7 @@ foreach ($_POST['topic'] as $topic) {
     
 }
 
-$query1 = 'SELECT id, book, chapter, verse, content FROM scripture_table';
+$query1 = 'SELECT id, book, chapter, verse, content FROM scriptures_table';
 foreach ($db->query($query1) as $row) {
     $id = $row['id'];
     
