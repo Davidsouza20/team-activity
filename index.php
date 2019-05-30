@@ -57,7 +57,7 @@ foreach ($db->query($query) as $row) {
     <?php 
       $query1 = "SELECT * FROM topic";
       foreach ($db->query($query1) as $row) {
-        echo '<input type="checkbox" name="topic[]" value="'.$row['name'] .'">' .$row['name'].' <br>';
+        echo '<input type="checkbox" name="topic[]" value="'.$row['id'] .'">' .$row['name'].' <br>';
       }
    
 

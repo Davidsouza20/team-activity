@@ -14,6 +14,37 @@ $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute();
+
+$scriptureId = $pdo->lastInsertId(scriptures_table_seq);
+
+$query = 'INSERT INTO link_topic_to_scripture (topicid, scriptureid) VALUES (:topicID, :scriptureID)'; 
+
+$stmt = $db->prepare($query);
+$stmt->bindValue(':scriptureID', $scriptureId, PDO::PARAM_INT);
+foreach ($_POST['topic'] as $topic) {
+     $stmt->bindValue(':topicID', $topic, PDO::PARAM_INT);
+}
+$stmt->execute();
 die();
+
+
+$query = "SELECT * FROM scriptures_table s INNER JOIN link_topic_to_scripture lt ON s.id = lt.scriptureid";
+
+
+foreach ($db->query($query) as $row) {
+    $id = $row['id'];
+
+    echo '<p class="m-3" href="details.php?id='.$id. '">';
+    echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
+
+    echo '<strong>' . $row['chapter'] . '</strong>' . ':';
+    
+    echo '<strong>' . $row['verse'] . '</strong>' . '&nbsp;';
+
+    echo $row['content']. '&nbsp;';
+
+    echo '</p><br>';
+}
+
 
 ?>
