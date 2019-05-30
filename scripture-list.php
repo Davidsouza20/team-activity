@@ -54,6 +54,6 @@ foreach ($db->query($query1) as $row) {
     }
     echo '</p>';*/
 }
-
+die();
 
 ?>
